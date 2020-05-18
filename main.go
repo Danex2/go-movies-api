@@ -26,7 +26,7 @@ func main() {
 		panic("There was an error opening the database!")
 	}
 
-	fmt.Println("Connected to databse successfully!")
+	fmt.Println("Connected to database successfully!")
 
 	database.DBConn.AutoMigrate(&movies.Movie{})
 

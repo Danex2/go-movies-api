@@ -47,10 +47,9 @@ func GetMovie(c *fiber.Ctx) {
 
 	id := c.Params("id")
 
-	m := &Movie{}
+	m := Movie{}
 
-	db.First(m, id)
+	db.First(&m, id)
 
 	c.JSON(m)
-
 }
